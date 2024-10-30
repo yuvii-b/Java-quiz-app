@@ -1,12 +1,13 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import static constants.Constants.*;
+import db.JDBC;
 
 public class LoginPg implements ActionListener {
     LoginPg(Frame frame){
+        //frame
+        frame.setTitle("Login");
 
         //labels
         heading = new Label("LOGIN");
@@ -69,6 +70,22 @@ public class LoginPg implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == login){
+            String name = nameInput.getText();
+            String email = emailInput.getText();
+            String password = passwordInput.getText();
+            if(JDBC.loginUser(name, email, password)){
+                result.setText("LOGIN SUCCESSFUL");
+                result.setForeground(new Color(0, 255, 0));
+            }else{
+                result.setText("LOGIN FAILED");
+                result.setForeground(new Color(255, 0, 0));
+            }
+        }
 
+        if(e.getSource() == back){
+            frame.dispose();
+            new MainContent();
+        }
     }
 }

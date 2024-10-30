@@ -67,6 +67,7 @@ class MainContent implements  ActionListener{
         }
             if(e.getSource() == login){
                 frame.removeAll();
+                new LoginPg(frame);
             }
     }
 }

@@ -1,21 +1,14 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import static constants.Constants.*;
+import db.JDBC;
 
 public class RegisterPg implements ActionListener {
     RegisterPg(Frame frame){
         //frame
-        frame = new Frame("SIGN UP");
-        frame.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        });
-
+        frame.setTitle("Sign-Up");
         //labels
         heading = new Label("REGISTER");
         heading.setBounds(145, 50, 200, 30);
@@ -94,6 +87,43 @@ public class RegisterPg implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == submit){
+            int age = -1;
+            String name = nameInput.getText();
+            String checkAge = ageInput.getText();
+            String email = emailInput.getText();
+            String password = passwordInput.getText();
+            String rePassword = rePassInput.getText();
+            if(validate(name, checkAge, email, password, rePassword)){
+                if(JDBC.registerUser(name, Integer.parseInt(checkAge), email, password)){
+                    result.setForeground(new Color(0, 255, 0));
+                    result.setText("SUCCESSFUL REGISTRATION");
+                }else{
+                    result.setForeground(new Color(255, 0, 0));
+                    result.setText("USERNAME ALREADY EXISTS");
+                }
+            }else{
+                JOptionPane.showMessageDialog(frame, """
+                        Error: Username, email, password must be at least 4 characters\s
+                        and/or Passwords must match\
+                        \s
+                        Check if all boxes are filled properly!""");
+            }
+        }
 
+        if(e.getSource() == back){
+            frame.dispose();
+            new MainContent();
+        }
+    }
+
+    private static boolean validate(String name, String age, String email, String password, String rePassword){
+        String regex = "\\d+";
+        if(name.isEmpty() || age.isEmpty() || email.isEmpty() || password.isEmpty() || rePassword.isEmpty()) return false;
+        if(name.length() < 3 || email.length() < 3 || password.length() < 3 || rePassword.length() < 3) return false;
+        if(!age.matches(regex)) return false;
+        if(!password.equals(rePassword)) return false;
+
+        return true;
     }
 }

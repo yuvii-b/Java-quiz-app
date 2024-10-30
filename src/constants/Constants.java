@@ -29,8 +29,8 @@ public class Constants {
     public static Button back;
 
     // MYSQL CREDENTIALS
-    public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/gui_db_schema";
+    public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/quiz_db_schema";
     public static final String DB_USERNAME = "root";
     public static final String DB_PASSWORD = "2806@mysql";
-    public static final String DB_TABLE_NAME = "users";
+    public static final String DB_TABLE_NAME = "participants";
 }
