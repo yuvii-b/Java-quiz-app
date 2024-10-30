@@ -74,6 +74,7 @@ class MainContent implements  ActionListener{
 
 public class FrontPg {
     public static void main(String[] args) {
-        new MainContent();
+//        new MainContent();
+        new Intro("Shrivishal");
     }
 }

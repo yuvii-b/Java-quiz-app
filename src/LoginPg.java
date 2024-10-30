@@ -77,6 +77,13 @@ public class LoginPg implements ActionListener {
             if(JDBC.loginUser(name, email, password)){
                 result.setText("LOGIN SUCCESSFUL");
                 result.setForeground(new Color(0, 255, 0));
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                }
+                frame.dispose();
+                new Intro(name);
             }else{
                 result.setText("LOGIN FAILED");
                 result.setForeground(new Color(255, 0, 0));

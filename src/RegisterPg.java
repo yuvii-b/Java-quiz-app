@@ -98,6 +98,8 @@ public class RegisterPg implements ActionListener {
                 if(JDBC.registerUser(name, Integer.parseInt(checkAge), email, password)){
                     result.setForeground(new Color(0, 255, 0));
                     result.setText("SUCCESSFUL REGISTRATION");
+                    frame.dispose();
+                    new Intro(name);
                 }else{
                     result.setForeground(new Color(255, 0, 0));
                     result.setText("USERNAME ALREADY EXISTS");
