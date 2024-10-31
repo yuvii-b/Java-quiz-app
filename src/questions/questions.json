@@ -1,0 +1,108 @@
+{
+  "questions": {
+    "tech": [
+      {
+        "question": "What does 'HTTP' stand for?",
+        "options": ["HyperText Transfer Protocol", "HighText Transfer Protocol", "HyperText Transmission Protocol", "High Transmission Text Protocol"],
+        "answer": "HyperText Transfer Protocol"
+      },
+      {
+        "question": "Which programming language is primarily used for Android app development?",
+        "options": ["Swift", "Kotlin", "JavaScript", "Python"],
+        "answer": "Kotlin"
+      },
+      {
+        "question": "Which company developed the 'Windows' operating system?",
+        "options": ["Apple", "Google", "Microsoft", "IBM"],
+        "answer": "Microsoft"
+      },
+      {
+        "question": "What is the default file extension for Python files?",
+        "options": [".py", ".txt", ".java", ".cpp"],
+        "answer": ".py"
+      },
+      {
+        "question": "What does 'GPU' stand for in computer graphics?",
+        "options": ["General Processing Unit", "Graphics Processing Unit", "Graphical Performance Unit", "Game Processing Unit"],
+        "answer": "Graphics Processing Unit"
+      },
+      {
+        "question": "Which of the following is a version control system?",
+        "options": ["Git", "Linux", "MySQL", "Docker"],
+        "answer": "Git"
+      },
+      {
+        "question": "Which programming language is commonly used for data analysis and scientific computing?",
+        "options": ["JavaScript", "Python", "PHP", "Ruby"],
+        "answer": "Python"
+      },
+      {
+        "question": "Which of the following is the smallest unit of data in a computer?",
+        "options": ["Kilobyte", "Megabyte", "Gigabyte", "Bit"],
+        "answer": "Bit"
+      },
+      {
+        "question": "Which protocol is used to securely transmit data over the internet?",
+        "options": ["HTTP", "FTP", "SSH", "HTTPS"],
+        "answer": "HTTPS"
+      },
+      {
+        "question": "What does 'SQL' stand for?",
+        "options": ["Structured Query Language", "Standard Query Language", "Sequential Query Language", "Simple Query Language"],
+        "answer": "Structured Query Language"
+      },
+      {
+        "question": "Which of the following is not a database management system (DBMS)?",
+        "options": ["MySQL", "PostgreSQL", "Microsoft Excel", "MongoDB"],
+        "answer": "Microsoft Excel"
+      },
+      {
+        "question": "What is the primary language used to create web pages?",
+        "options": ["CSS", "HTML", "Python", "Java"],
+        "answer": "HTML"
+      },
+      {
+        "question": "Which company owns the Android operating system?",
+        "options": ["Microsoft", "Apple", "Google", "IBM"],
+        "answer": "Google"
+      },
+      {
+        "question": "What does 'AI' stand for?",
+        "options": ["Artificial Intelligence", "Automatic Interface", "Advanced Internet", "Augmented Integration"],
+        "answer": "Artificial Intelligence"
+      },
+      {
+        "question": "Which one of the following is not a web browser?",
+        "options": ["Chrome", "Firefox", "Safari", "Adobe"],
+        "answer": "Adobe"
+      },
+      {
+        "question": "Which cloud platform is developed by Amazon?",
+        "options": ["Microsoft Azure", "Google Cloud", "Amazon Web Services (AWS)", "IBM Cloud"],
+        "answer": "Amazon Web Services (AWS)"
+      }
+    ],
+    "general": [
+      {
+        "question": "Who is known as the 'Father of Computers'?",
+        "options": ["Alan Turing", "Charles Babbage", "Bill Gates", "Steve Jobs"],
+        "answer": "Charles Babbage"
+      },
+      {
+        "question": "In the Marvel Cinematic Universe, what is the real name of Iron Man?",
+        "options": ["Steve Rogers", "Peter Parker", "Tony Stark", "Bruce Wayne"],
+        "answer": "Tony Stark"
+      },
+      {
+        "question": "What is the maximum number of characters that can be used in a tweet on X (formerly Twitter)?",
+        "options": ["120", "240", "280", "320"],
+        "answer": "280"
+      },
+      {
+        "question": "Who co-founded Apple Inc. with Steve Jobs?",
+        "options": ["Bill Gates", "Steve Wozniak", "Mark Zuckerberg", "Larry Page"],
+        "answer": "Steve Wozniak"
+      }
+    ]
+  }
+}

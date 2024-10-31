@@ -5,7 +5,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import static constants.Constants.*;
 
-class MainContent implements  ActionListener{
+class
+MainContent implements  ActionListener{
     MainContent(){
         //frame
         frame = new Frame("QUIZ APPLICATION!");

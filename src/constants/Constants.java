@@ -32,11 +32,10 @@ public class Constants {
     public static Label num_questions;
     public static Button tech;
     public static Button general;
-    public static Button q5 = new Button("5");
-    public static Button q10 = new Button("10");
-    public static Button q15 = new Button("15");
-    public static Button q20 = new Button("20");
-    public static Button[] questions = {q5, q10, q15, q20};
+    public static Button[] questions = {new Button("5"), new Button("10"), new Button("15"), new Button("20")};
+    public static Button start;
+    public static Label user_topic;
+    public static Label user_ques;
 
     // MYSQL CREDENTIALS
     public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/quiz_db_schema";

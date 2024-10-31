@@ -27,6 +27,12 @@ public class Intro implements ActionListener {
         num_questions = new Label("SELECT THE NUMBER OF QUESTIONS");
         num_questions.setBounds(10, 220, 500, 30);
         num_questions.setFont(new Font("Serif", Font.BOLD, 20));
+        user_topic = new Label();
+        user_topic.setBounds(200, 290, 500, 30);
+        user_topic.setFont(new Font("Serif", Font.BOLD, 20));
+        user_ques = new Label();
+        user_ques.setBounds(200, 350, 500, 30);
+        user_ques.setFont(new Font("Serif", Font.BOLD, 20));
 
         //buttons
         tech = new Button("TECH");
@@ -46,6 +52,11 @@ public class Intro implements ActionListener {
             questions[i].addActionListener(this);
             frame.add(questions[i]);
         }
+        start = new Button("START ==>");
+        start.setBounds(340, 420, 130, 60);
+        start.setFont(new Font("Serif", Font.BOLD, 20));
+        start.setFocusable(false);
+        start.addActionListener(this);
 
         //adding components
         frame.add(heading);
@@ -53,6 +64,9 @@ public class Intro implements ActionListener {
         frame.add(tech);
         frame.add(general);
         frame.add(num_questions);
+        frame.add(start);
+        frame.add(user_topic);
+        frame.add(user_ques);
 
         //frame properties
         frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -63,13 +77,24 @@ public class Intro implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == tech) System.out.println("TECH");
-        if(e.getSource() == general) System.out.println("GENERAL");
+        String topic = "";
+        int no_questions = 0;
+        if(e.getSource() == tech){
+                topic = tech.getLabel();
+                user_topic.setText("Topic: " + topic);
+        }
+        if(e.getSource() == general){
+            topic = general.getLabel();
+            user_topic.setText("Topic: " + topic);
+        }
         for(int i = 0; i < 4; ++i){
             if(e.getSource() == questions[i]){
-                int no_questions = Integer.parseInt(questions[i].getLabel());
-                System.out.println(no_questions);
+                user_ques.setText("No of questions: " + questions[i].getLabel());
+                no_questions = Integer.parseInt(questions[i].getLabel());
             }
+        }
+        if(e.getSource() == start){
+            new GameWindow(topic, no_questions);
         }
     }
 }
