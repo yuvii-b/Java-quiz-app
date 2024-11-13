@@ -1,9 +1,12 @@
 package questions;
 
+import java.util.List;
+import java.util.Map;
+
 public class Question {
-    String question = null;
-    String[] options = new String[4];
-    String answer = null;
+    private String question;
+    private List<String> options;
+    private String answer;
 
     public String getQuestion() {
         return question;
@@ -13,11 +16,11 @@ public class Question {
         this.question = question;
     }
 
-    public String[] getOptions() {
+    public List<String> getOptions() {
         return options;
     }
 
-    public void setOptions(String[] options) {
+    public void setOptions(List<String> options) {
         this.options = options;
     }
 
