@@ -1,3 +1,5 @@
+import questions.Handler;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -77,15 +79,13 @@ public class Intro implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String topic = "";
-        int no_questions = 0;
         if(e.getSource() == tech){
-                topic = tech.getLabel();
-                user_topic.setText("Topic: " + topic);
+                questionTopic = tech.getLabel();
+                user_topic.setText("Topic: " + questionTopic);
         }
         if(e.getSource() == general){
-            topic = general.getLabel();
-            user_topic.setText("Topic: " + topic);
+            questionTopic = general.getLabel();
+            user_topic.setText("Topic: " + questionTopic);
         }
         for(int i = 0; i < 4; ++i){
             if(e.getSource() == questions[i]){
@@ -94,7 +94,9 @@ public class Intro implements ActionListener {
             }
         }
         if(e.getSource() == start){
-            new GameWindow(topic, no_questions);
+            Handler handler = new Handler();
+            handler.generateQuestions(questionTopic, no_questions);
+            new GameWindow(questionTopic, no_questions);
         }
     }
 }

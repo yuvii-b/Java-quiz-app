@@ -7,6 +7,9 @@ public class Constants {
     public static final int FRAME_WIDTH = 500;
     public static final int FRAME_HEIGHT = 500;
 
+    public static String questionTopic;
+    public static int no_questions;
+
     // AWT FRAME COMPONENTS
     public static Frame frame;
     public static Label heading;
